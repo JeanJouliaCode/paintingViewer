@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <img v-for="(img, index) in imagesList" :key="index" :src="img" />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import db from "../../firebaseConfig.js";
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
+  data() {
+    return {
+      imagesList: [],
+    };
+  },
+  async mounted() {
+    var images = await db.collection("images").get();
+    images.docs.forEach((doc) => {
+      this.imagesList.push(doc.data().imageData);
+    });
   },
 };
 </script>
+
+<style>
+</style>
