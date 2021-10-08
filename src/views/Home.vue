@@ -1,5 +1,12 @@
 <template>
-  <img v-for="(img, index) in imagesList" :key="index" :src="img" />
+  <div class="images">
+    <img
+      v-for="(img, index) in imagesList"
+      :key="index"
+      :src="img"
+      class="image"
+    />
+  </div>
 </template>
 
 <script>
@@ -20,4 +27,16 @@ export default {
 </script>
 
 <style>
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.image {
+  width: 20%;
+  border: solid 2px;
+  margin: 20px;
+}
 </style>
