@@ -1,24 +1,7 @@
-# painting-viewer
+# painting viewer
 
-## Project setup
-```
-npm install
-```
+Painting viewer is a small app that give access to drawing made by players of Moist Chameleon. 
+Some of the drawing can be nsfw since I don't moderate the content
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+https://jeanjouliacode.github.io/paintingViewer/
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
